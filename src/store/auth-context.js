@@ -18,6 +18,9 @@ const loginHandler = (token) =>{
 
     setToken(token)
     localStorage.setItem('token',token)
+    setTimeout(()=>{
+        localStorage.removeItem('token'),5*60*1000
+    })
 }
 
 const logoutHandler= ()=>{
